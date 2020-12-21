@@ -822,9 +822,12 @@ void BaseWindow::SetVisibleOnAllWorkspaces(bool visible,
                                            gin_helper::Arguments* args) {
   gin_helper::Dictionary options;
   bool visibleOnFullScreen = false;
+  bool transformProcessType = true;
   args->GetNext(&options) &&
       options.Get("visibleOnFullScreen", &visibleOnFullScreen);
-  return window_->SetVisibleOnAllWorkspaces(visible, visibleOnFullScreen);
+  args->GetNext(&options) &&
+      options.Get("transformProcessType", &transformProcessType);
+  return window_->SetVisibleOnAllWorkspaces(visible, visibleOnFullScreen, transformProcessType);
 }
 
 bool BaseWindow::IsVisibleOnAllWorkspaces() {

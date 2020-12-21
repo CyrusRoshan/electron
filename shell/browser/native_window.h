@@ -188,7 +188,8 @@ class NativeWindow : public base::SupportsUserData,
 
   // Workspace APIs.
   virtual void SetVisibleOnAllWorkspaces(bool visible,
-                                         bool visibleOnFullScreen = false) = 0;
+                                         bool visibleOnFullScreen = false,
+                                         bool transformProcessType = true) = 0;
 
   virtual bool IsVisibleOnAllWorkspaces() = 0;
 

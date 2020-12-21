@@ -1626,6 +1626,8 @@ Returns `Boolean` - Whether the menu bar is visible.
 * `options` Object (optional)
   * `visibleOnFullScreen` Boolean (optional) _macOS_ - Sets whether
     the window should be visible above fullscreen windows
+  * `transformProcessType` Boolean (optional) _macOS_ - Sets whether
+    the process type should be transformed. Default is `true`
 
 Sets whether the window should be visible on all workspaces.
 
